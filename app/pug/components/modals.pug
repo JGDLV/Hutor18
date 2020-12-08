@@ -1,0 +1,21 @@
+-
+  var modals = [
+    {
+      name: 'callback',
+      header: 'Обратный звонок',
+    },
+    {
+      name: 'excursion',
+      header: 'Записаться на экскурсию',
+    },
+  ]
+
+each modal in modals
+  .modal.mfp-hide(id=modal.name)
+    h2.modal__header !{modal.header}
+    form.modal-form.flex.jcsb
+      input(type="hidden" name="action" value=modal.name)
+      input(type="text" name="name" placeholder="Ваше имя")
+      input(type="text" name="phone" placeholder="Ваш телефон *" required)
+      textarea(name="comment" placeholder="Комментарий")
+      button.btn(type="submit") Отправить

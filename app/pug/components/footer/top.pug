@@ -1,0 +1,37 @@
+-
+  var footer = {
+    menus: [
+      {
+        items: [
+          { href: '#', text: 'Услуги и цены' },
+          { href: '#', text: 'Проживание' },
+          { href: '#', text: 'Уход и реабилитация' }
+        ]
+      },
+      {
+        items: [
+          { href: '#', text: 'О пансионате' },
+          { href: '#', text: 'Контакты' }
+        ]
+      },
+    ],
+    text: 'Пансионат «Лесной хутор» <br>Ижевск, микрорайон Липовая роща, ул. Лесной хутор, дом 3',
+    copyright: '«Лесной хутор» © 2017'
+  }
+
+.footer-top
+  .container
+    .footer-top__inner.flex
+      each menu in footer.menus
+        .footer-menu
+          ul.footer-menu-items
+            each item in menu.items
+              li.footer-menu__item
+                a.footer-menu__link(href=item.href) !{item.text}
+      .footer__right.flex.jcsb
+        .footer-contacts
+          a.footer-contacts__phone(href='tel:' + phoneFix(header.phone)) !{header.phone}
+          p.footer-contacts__whours !{header.whours}
+        a.footer__button.btn(href=header.button.href) !{header.button.text}
+        .footer__text !{footer.text}
+

@@ -1,0 +1,18 @@
+-
+  var menu = {
+    items: [
+      { href: '#', text: 'О пансионате' },
+      { href: '#', text: 'Услуги и цены' },
+      { href: '#', text: 'Проживание' },
+      { href: '#', text: 'Уход и реабилитация' },
+      { href: '#', text: 'Контакты' },
+    ]
+  }
+
+.header-bottom
+  .container
+    .menu
+      ul.flex
+        each item in menu.items
+          li
+            a(href=item.href) !{item.text}

@@ -1,0 +1,17 @@
+-
+  var intro = {
+    header: 'Пансионат в Ижевске <br>«Лесной хутор»',
+    subheader: 'Проявите заботу о своих близких',
+    text: 'Наш дом престарелых подготовлен для приема постояльцев любого возраста и для людей с любой группой инвалидности',
+    special: {
+      text: 'Акция! 4 дня проживания в пансионате <br>для пожилых людей бесплатно!',
+      small: 'Приезжайте и оцените удобство номеров'
+    }
+  }
+
+.intro#intro
+  .container
+    h1.intro__header !{intro.header}
+    p.intro__subheader !{intro.subheader}
+    p.intro__text !{intro.text}
+  +special(true, intro.special.text, intro.special.small, 'brown')

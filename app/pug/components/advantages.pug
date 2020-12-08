@@ -1,0 +1,42 @@
+-
+  var advantages = {
+    header: 'Дом-пансионат в Ижевске',
+    subheader: 'Дарим отдых вам и вашим близким',
+    items: [
+      {
+        image: 'img/advantages-01.svg',
+        header: 'Большой новый дом',
+        text: 'Построили просторное здание площадью 500 м2 в 2016 году. В каждой комнате есть воздухообменные клапаны, поэтому в помещениях легко дышится'
+      },
+      {
+        image: 'img/advantages-02.svg',
+        header: 'Комплексное оснащение',
+        text: 'Установили теплый пол, медицинские кровати, ступенькоход. В распоряжении жильцов кресла-каталки, ходунки, настольные игры, книги, фильмы и интернет'
+      },
+      {
+        image: 'img/advantages-03.svg',
+        header: 'Квалифицированный медперсонал',
+        text: 'Наблюдаем за постояльцами круглосуточно. В штате работают внимательные сиделки с медицинским образованием (медсестры и фельдшеры)'
+      },
+      {
+        image: 'img/advantages-04.svg',
+        header: 'Официальный договор',
+        text: 'Заключаем соглашение с клиентами. Вы знаете, какие процедуры мы проводим и чем занимаются ваши родственники'
+      },
+    ],
+    specialText: 'Приезжайте в дом престарелых «Лесной хутор» <br>и убедитесь в его удобстве сами'
+  }
+
+.advantages#advantages
+  .container
+    h2.advantages__header !{advantages.header}
+    p.advantages__subheader !{advantages.subheader}
+    .advantages-items.flex
+      each item in advantages.items
+        .advantages__item.flex
+          .advantages__item-image-part.flex.aic.jcc
+            img.advantages__item-image(src=item.image, alt='')
+          .advantages__item-text-part
+            p.advantages__item-header !{item.header}
+            p.advantages__item-text !{item.text}
+  +special(false, advantages.specialText, false, 'yellow')

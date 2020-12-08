@@ -1,0 +1,17 @@
+-
+  var about = {
+    header: 'Пансионат в Ижевске',
+    subheader: 'Каждый постоялец для нас — родной человек',
+    texts: {
+      left: 'Современный пансионат для пожилых людей находится в благоустроенном трехэтажном здании. Оборудована площадка 1500 м<sup>2</sup> для прогулок на свежем воздухе',
+      right: 'В каждом номере установлена кнопка вызова персонала. <br>Для людей с ограниченной подвижностью предоставляем противопролежневые матрасы, инвалидные кресла и ходунки'
+    }
+  }
+
+.about#about
+  .container
+    h2.about__header !{about.header}
+    p.about__subheader !{about.subheader}
+    .about__inner.flex.jcsb
+      .about__left !{about.texts.left}
+      .about__right !{about.texts.right}

@@ -1,0 +1,18 @@
+extends _layout.pug
+
+block variables
+  -
+    var title = 'Дом престарелых Лесной хутор. Частный пансионат в Ижевске. Тел. +7 (982) 7-999-333'
+    var description = 'Частный пансионат в Ижевске. Дом престарелых Лесной хутор. Пансионат для пожилых людей и инвалидов. Проживание от 700 рублей в сутки. Экологичный район рядом с липовой рощей. +7 (982) 7-999-333'
+    var index = true
+
+block content
+  include components/intro.pug
+  include components/about.pug
+  include components/services.pug
+  include components/benefits.pug
+  include components/photos.pug
+  include components/cost.pug
+  include components/reviews.pug
+  include components/advantages.pug
+  include components/map.pug

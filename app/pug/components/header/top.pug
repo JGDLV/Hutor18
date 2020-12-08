@@ -1,0 +1,22 @@
+-
+  var header = {
+    logo: 'img/logo.png',
+    tagline: { title: 'Лесной хутор', text: 'Пансионат для пожилых людей в Ижевске' },
+    phone: '+7 (982) 7-999-333',
+    whours: 'с 09:00 до 18:00',
+    button: { href: '#callback', text: 'заказать звонок' }
+  }
+
+.header-top
+  .container
+    .header-top__inner.flex.aic
+      .logo
+        a(href="/")
+          img(src=header.logo, alt="")
+      .tagline
+        p.tagline__title !{header.tagline.title}
+        p.tagline__text !{header.tagline.text}
+      .header-contacts
+        a.header-contacts__phone(href='tel:' + phoneFix(header.phone)) !{header.phone}
+        p.header-contacts__whours !{header.whours}
+      a.header__button.btn(href=header.button.href) !{header.button.text}

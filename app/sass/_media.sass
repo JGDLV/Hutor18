@@ -1,0 +1,252 @@
+@media (min-width: 576px)
+  .container
+    max-width: 540px
+
+@media (min-width: 768px)
+  .container
+    max-width: 720px
+
+@media (min-width: 992px)
+  .container
+    max-width: 960px
+
+@media (min-width: 1200px)
+  .container
+    max-width: 1200px
+
+  
+@media (max-width: 1230px)
+  .header
+    &-top
+      &__inner
+        justify-content: center
+    .logo, .tagline, &-contacts, &__button
+      margin: 5px 20px
+  .menu
+    & > ul
+      justify-content: center
+      & > li
+        flex-grow: 0
+        & > a
+          line-height: normal
+          padding: 15px 20px
+  .intro
+    padding: 40px 0 0
+    text-align: center
+    &__text
+      margin-bottom: 40px
+  .special
+    padding: 15px 0 !important
+    position: static
+    height: auto
+    text-align: center
+    &__image
+      display: none
+    &__left, &__right
+      width: 100%
+      padding: 10px 0
+      br
+        display: none
+    &__button
+      max-width: 320px
+      margin: auto
+  .about
+    padding: 40px 0
+    &__header
+      text-align: center
+    &__subheader
+      text-align: center
+    .about__left, .about__right
+      br
+        display: none
+    .about__left
+      margin-bottom: 15px
+  .services
+    padding: 40px 0
+    &__header
+      text-align: center
+  .services__item-header
+    line-height: normal
+    padding: 15px
+  .benefits
+    padding: 40px 0
+    &-items
+      justify-content: center
+      margin-top: 40px
+    &__item
+      width: 240px
+      margin-bottom: 30px
+  .photos
+    padding: 40px 0 60px
+    .tabs__control
+      margin: 10px
+    &-items
+      justify-content: center
+      margin-left: 0
+      margin-right: 0
+    &__item
+      width: calc(100% / 3 - 30px)
+  .cost
+    padding: 40px 0 0
+    &__text
+      br
+        display: none
+    &__left
+      display: none
+    &__right
+      width: 100%
+    &__item
+      &-price
+        position: relative
+        padding-top: 35px
+        &::before
+          +p
+          content: attr(data-label)
+          font-size: 14px
+          width: 100%
+          top: 0
+          left: 0
+          padding: 15px
+          line-height: 1
+  .reviews
+    padding: 40px 0
+    &__header
+      margin-bottom: 30px !important
+    .owl-nav .owl-prev
+      left: 30px
+    .owl-nav .owl-next
+      right: 30px
+    .owl-nav button
+      top: 0
+  .advantages
+    padding: 40px 0
+  .footer
+    &-top
+      padding: 30px 0
+      &__inner
+        justify-content: center
+    &-menu
+      margin: 0 30px 30px !important
+    &__right
+      max-width: 100%
+      text-align: center
+    &-contacts
+      width: 100%
+    &__text
+      width: 100%
+      margin: 15px 0 30px
+    &__button
+      order: 2
+      margin: auto
+
+@media (max-width: 992px)
+  .photos__item
+    width: calc(100% / 2 - 30px)
+  .cost__item-header
+    line-height: normal
+  .advantages__item
+    width: 100%
+
+@media (max-width: 768px)
+  .tagline
+    width: 100%
+    margin: 15px 0 !important
+    text-align: center
+  h1, h2
+    font-size: 2em !important
+    line-height: normal !important
+    margin-bottom: 15px !important
+    & + *[class*="subheader"]
+      font-size: 1.4em !important
+      line-height: normal !important
+      margin-bottom: 15px !important
+  .special__text, .services__text
+    font-size: 1.3em
+    line-height: normal
+  .services__text
+    text-align: center
+  .services__item
+    width: 100%
+    margin-bottom: 30px
+    &:last-child
+      margin-bottom: 0
+  .cost__item
+    width: 100%
+    margin-bottom: 30px
+    &:last-child
+      margin-bottom: 0
+  .cost__inner
+    margin-bottom: 30px
+
+@media (max-width: 750px)
+  .modal
+    padding: 30px
+    &__header
+      margin-bottom: 30px !important
+  .modal-form input[type="text"]
+    width: 48%
+
+@media (max-width: 590px)
+  .header
+    .logo, .tagline, &-contacts, &__button
+      &:last-child
+        margin-bottom: 0
+  .tagline
+    width: 100%
+    text-align: center
+  h1, h2
+    font-size: 1.4em !important
+    & + *[class*="subheader"]
+      font-size: 1.2em !important
+  .photos .tabs__control
+    text-align: center
+    width: 100%
+    margin: 5px 0
+  .photos__item
+    width: 100%
+  .advantages-items
+    margin-left: 0
+    margin-right: 0
+  .advantages__item
+    flex-direction: column
+    margin-left: 0
+    margin-right: 0
+    &-text-part
+      padding: 20px 0 0 0
+      width: 100%
+
+@media (max-width: 500px)
+  .header
+    &-contacts
+      &__phone
+        margin-left: 0
+      &__whours
+        display: none
+  .special__button
+    font-size: .9em
+  .special__text_small
+    line-height: normal
+    margin-top: 15px
+  .about__left, .about__right
+    width: 100%
+  .advantages__item-header
+    font-size: 1.5em
+    margin-bottom: 15px
+  .footer-menu
+    width: 100%
+    margin: 0 !important
+    text-align: center
+  .footer-contacts
+    margin-top: 30px
+  .footer-bottom__inner
+    justify-content: center
+    padding: 10px 0
+    p
+      width: 100%
+      text-align: center
+      line-height: 2
+  .modal__header
+    padding: 0 50px
+  .modal-form input[type="text"]
+    width: 100%
+    margin-bottom: 15px

@@ -1,0 +1,45 @@
+-
+  var benefits = {
+    header: 'Пансионат для пожилых людей',
+    subheader: 'Подарите близким ощущение спокойствия и комфорта',
+    items: [
+      {
+        image: 'img/benefits-01.svg',
+        header: 'Экологично',
+        text: 'Построили здание<br>рядом с липовой<br>рощей, на участке<br>растут деревья, кустарники и цветы'
+      },
+      {
+        image: 'img/benefits-02.svg',
+        header: 'Уютно',
+        text: 'Оборудовали каждую<br>комнату новой мебелью,<br>отдельным санузлом с<br>поручнями, спутниковым телевидением'
+      },
+      {
+        image: 'img/benefits-03.svg',
+        header: 'Безопасно',
+        text: 'Поставили на территории<br>и в комнатах системы<br>видеонаблюдения и<br>пожарной безопасности'
+      },
+      {
+        image: 'img/benefits-04.svg',
+        header: 'Интересно',
+        text: 'Продумали режим дня,<br>чтобы вашим близким<br>не пришлось скучать.<br>Распорядок вы<br><a href="#">найдете тут</a>'
+      },
+      {
+        image: 'img/benefits-05.svg',
+        header: 'Тихо',
+        text: 'Возвели дом в 500 метрах<br>от дороги и других зданий.<br>Городской шум и соседи<br>не помешают жильцам'
+      },
+    ]
+  }
+
+.benefits#benefits
+  .container
+    h2.benefits__header !{benefits.header}
+    p.benefits__subheader !{benefits.subheader}
+    .benefits-items.flex.jcsb
+      each item in benefits.items
+        .benefits__item
+          .benefits__item-image-part.flex.aic.jcc
+            img.benefits__item-image(src=item.image, alt='')
+          .benefits__item-text-part
+            p.benefits__item-header !{item.header}
+            p.benefits__item-text !{item.text}

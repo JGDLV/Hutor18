@@ -1,0 +1,40 @@
+-
+  var photos = {
+    header: 'Фотогалерея пансионата в Ижевске',
+    tabs: [
+      {
+        header: 'Дом и окрестности',
+        items: ['img/photos-01.png', 'img/photos-02.png', 'img/photos-03.png', 'img/photos-04.png', 'img/photos-05.png', 'img/photos-06.png', 'img/photos-07.png', 'img/photos-08.png'],
+        text: '1'
+      },
+      {
+        header: 'Общие помещения',
+        items: ['img/photos-01.png', 'img/photos-02.png', 'img/photos-03.png', 'img/photos-04.png', 'img/photos-05.png', 'img/photos-06.png', 'img/photos-07.png', 'img/photos-08.png'],
+        text: '2'
+      },
+      {
+        header: 'Столовая',
+        items: ['img/photos-01.png', 'img/photos-02.png', 'img/photos-03.png', 'img/photos-04.png', 'img/photos-05.png', 'img/photos-06.png', 'img/photos-07.png', 'img/photos-08.png'],
+        text: '3'
+      },
+      {
+        header: 'Комнаты',
+        items: ['img/photos-01.png', 'img/photos-02.png', 'img/photos-03.png', 'img/photos-04.png', 'img/photos-05.png', 'img/photos-06.png', 'img/photos-07.png', 'img/photos-08.png'],
+        text: '4'
+      },
+    ]
+  }
+
+.photos#photos
+  .container
+    h2.photos__header !{photos.header}
+    .tabs
+      .tabs-controls.flex.jcc
+        each control in photos.tabs
+          .tabs__control !{control.header}
+      each content in photos.tabs
+        .tabs__content
+          .photos-items.flex
+            each item in content.items
+              a.photos__item(href=item)
+                img.photos__item-image(src=item, alt="")

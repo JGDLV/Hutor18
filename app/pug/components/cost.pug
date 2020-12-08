@@ -1,0 +1,40 @@
+-
+  var cost = {
+    header: 'Стоимость размещения <br>в доме престарелых «Лесной хутор»',
+    subheader: '(в рублях в сутки)',
+    text: 'Предлагаем клиентам временное или постоянное проживание с распорядком дня. 3 способа оплаты <br>проживания: наличный расчет, перевод по карте Visa MasterCard, перечисление на расчетный счет компании.',
+    labels: ['Способные передвигаться самостоятельно', 'Нуждающиеся в постоянном наблюдении', 'Лежачие и тяжело больные'],
+    items: [
+      {
+        header: 'Стандарт<br>(3–5 человека)',
+        prices: ['1 300', '1 450', '1 550']
+      },
+      {
+        header: 'Дуплекс<br>(семейное проживание)',
+        prices: ['1 000', '1 100', '1 200']
+      },
+      {
+        header: 'Люкс<br>(1 человек)',
+        prices: ['1 800', '2 000', '2 200']
+      },
+    ],
+    specialText: 'Участвуйте в акции пансионата в Ижевске: <br>проживание в 4-местном номере <br>за 700 рублей в сутки!',
+  }
+
+.cost#cost
+  .container
+    h2.cost__header !{cost.header}
+    p.cost__subheader !{cost.subheader}
+    p.cost__text !{cost.text}
+    .cost__inner.flex.jcsb
+      .cost__left
+        each label in cost.labels
+          .cost__label !{label}
+      .cost__right
+        .cost-items.flex.jcsb
+          each item in cost.items
+            .cost__item
+              .cost__item-header.flex.aic.jcc !{item.header}
+              each price, index in item.prices
+                .cost__item-price(data-label=cost.labels[index]) !{price}
+  +special(true, cost.specialText, false, 'yellow')

@@ -1,0 +1,38 @@
+block variables
+  -
+    var title = 'title'
+    var description = 'description'
+
+mixin special(image, text, smallText, className)
+  .special(class='special_' + className)
+    .container
+      .special__inner.flex.jcsb.aic
+        .special__left.flex.aic
+          if image
+            img.special__image(src="img/special.svg", alt="")
+          p.special__text !{text}
+        .special__right
+          a.special__button.btn(href="#excursion") Записаться на экскурсию!
+          if smallText
+            p.special__text_small !{smallText}
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title= title
+    meta(name='description' content=description)
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='css/libs.min.css')
+    link(rel='stylesheet' href='css/style.css')
+  body(class=index ? '' : 'inner')
+    .header
+      include components/header/header.pug
+    .content
+      block content
+    .footer
+      include components/footer/footer.pug
+    include components/modals.pug
+    #top.fas.fa-arrow-up.a-drop
+    script(src='js/libs.min.js')
+    script(src='js/scripts.js')
